@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "title", limit: 100, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["title"], name: "index_categories_on_title", unique: true
   end
 
@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
     t.bigint "product_id", null: false
     t.integer "quantity", null: false
     t.decimal "price", precision: 15, scale: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_order_items_on_order_id"
     t.index ["product_id"], name: "index_order_items_on_product_id"
   end
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
     t.string "first_name"
     t.string "last_name"
     t.decimal "sub_total", precision: 15, scale: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "token"
     t.string "status", default: "cart"
   end
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
   create_table "product_categories", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "category_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_product_categories_on_category_id"
     t.index ["product_id"], name: "index_product_categories_on_product_id"
   end
@@ -103,8 +103,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
     t.bigint "product_id", null: false
     t.string "title", limit: 100, null: false
     t.decimal "price", precision: 15, scale: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_product_variants_on_product_id"
   end
 
@@ -112,8 +112,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_185515) do
     t.string "title", limit: 150, null: false
     t.decimal "price", precision: 15, scale: 2, default: "0.0", null: false
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["title"], name: "index_products_on_title", unique: true
   end
 
