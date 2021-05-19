@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This is a shopping application.
+- Different categories are available from where user can select the products they want to add to the cart.
+- Quantity of the products can be added while adding product to the cart.
+- Active storage is used to upload images of the products.
+- A detailed receipt is generated at the checkout. 
+- The database of the system is normalised to make response time of the application better.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
